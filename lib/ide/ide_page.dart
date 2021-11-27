@@ -109,7 +109,7 @@ class _IdeEditorPageState extends State<IdeEditorPage> {
                   "root",
                 ),
               ),
-            ),
+            ).expand(),
           ],
         ),
         leading: IconButton(
@@ -135,6 +135,7 @@ class _IdeEditorPageState extends State<IdeEditorPage> {
                           _themeController.setCode(_codeController.rawText);
                           _themeController.toggleRunning();
                         } else {
+                          _themeController.toggleRunning();
                           Get.to(() => ResultsPage(
                                 code: _codeController.rawText,
                                 language: widget.languageModel,

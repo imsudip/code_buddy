@@ -32,6 +32,7 @@ class _HomepageState extends State<Homepage> {
             title: "Code Buddy"
                 .text
                 .textStyle(GoogleFonts.pacifico())
+                .maxLines(1)
                 .size(42)
                 .green400
                 .make(),

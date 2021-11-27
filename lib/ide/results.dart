@@ -43,6 +43,7 @@ class _ResultsPageState extends State<ResultsPage> {
     code = _themeController.code.value;
     if (_themeController.isrunning.value &&
         CompilerState.COMPILING != compilerState) {
+      print("Compiling");
       _runCode();
     }
   }
@@ -99,8 +100,8 @@ class _ResultsPageState extends State<ResultsPage> {
           output = (o['code_output'] as List).join("\n");
         }
 
-        setState(() {});
         _themeController.toggleRunning();
+        setState(() {});
         return false;
       } else {
         apicallCount--;
